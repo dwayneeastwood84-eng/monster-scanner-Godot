@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://cpyagrsdagtal"]
+
+[ext_resource type="Script" uid="uid://7mjay0kl1xgt" path="res://scanner.gd" id="1_2ars4"]
+
+[node name="Scanner" type="Control" unique_id=765020408]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_2ars4")
+
+[node name="Summon" type="Label" parent="." unique_id=1157642816]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -170.0
+offset_right = 187.5
+offset_bottom = 123.0
+grow_horizontal = 2
+text = "Summon Monster"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Monster Scanner" type="Button" parent="." unique_id=188451885]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -150.0
+offset_right = 150.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Press To Scan"
+
+[connection signal="pressed" from="Monster Scanner" to="." method="_on_monster_scanner_pressed"]

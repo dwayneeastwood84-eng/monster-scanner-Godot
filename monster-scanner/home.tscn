@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://b6gvbtwnlf6hg"]
+
+[ext_resource type="Script" uid="uid://badb00y1yhnef" path="res://home.gd" id="1_tt30a"]
+
+[node name="home" type="Control" unique_id=334663063]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 311.0
+offset_bottom = -470.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tt30a")
+
+[node name="Label" type="Label" parent="." unique_id=59472259]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -304.0
+offset_right = -13.5
+offset_bottom = 82.0
+grow_horizontal = 2
+text = "Home Screen"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=837980262]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -305.5
+offset_top = 120.0
+offset_right = -243.5
+offset_bottom = 164.0
+grow_horizontal = 2
+
+[node name="ScannerButton" type="Button" parent="VBoxContainer" unique_id=1999882317]
+layout_mode = 2
+text = "Summon Monster"
+
+[node name="CollectionButton" type="Button" parent="VBoxContainer" unique_id=913037688]
+layout_mode = 2
+text = "View Collection"
+
+[node name="BattleButton" type="Button" parent="VBoxContainer" unique_id=2087592829]
+layout_mode = 2
+text = "Battle"
+
+[node name="InstructionsButton" type="Button" parent="VBoxContainer" unique_id=400920622]
+layout_mode = 2
+text = "How To Play"
+
+[connection signal="pressed" from="VBoxContainer/ScannerButton" to="." method="_on_scanner_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/CollectionButton" to="." method="_on_collection_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/BattleButton" to="." method="_on_battle_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/InstructionsButton" to="." method="_on_instructions_button_pressed"]
